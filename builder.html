@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#f4f2e9">
+  <title>Создать задание — Interactive Task Builder</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/animations.css">
+  <script src="js/tasks.js" defer></script><script src="js/checker.js" defer></script><script src="js/builder.js" defer></script>
+</head>
+<body class="builder-page">
+  <header class="topbar"><a class="brand" href="index.html"><span class="brand-mark">it<span>.</span></span><span class="brand-name">Interactive<br>Task Builder</span></a><nav class="main-nav" aria-label="Основная навигация"><a class="nav-link" href="index.html">Главная</a><a class="nav-link" href="index.html#catalog">Все задания</a><a class="nav-link is-active" href="builder.html">Создать</a><a class="nav-link" href="index.html#catalog">Мои задания</a></nav><button class="menu-toggle" id="menu-toggle" type="button" aria-label="Открыть меню" aria-expanded="false">☰</button><a class="button button-dark top-create" href="index.html">← В каталог</a></header>
+  <main class="builder-main"><div class="builder-heading"><div><p class="eyebrow"><span class="eyebrow-dot"></span> Мастерская заданий</p><h1>Собери свой <em>формат.</em></h1></div><p class="builder-intro">Придумайте упражнение, проверьте его в предпросмотре и сохраните в свою библиотеку.</p></div>
+    <div class="builder-layout"><aside class="builder-rail"><p class="rail-label">ШАГ 01 / ФОРМАТ</p><div class="type-list" id="type-list" role="listbox" aria-label="Выберите тип задания"></div><div class="rail-tip"><span>✳</span><p>Все изменения видны сразу в предпросмотре.</p></div></aside>
+      <section class="editor-panel" aria-label="Редактор задания"><div class="editor-top"><div><p class="eyebrow">Шаг 02 / Содержание</p><h2 id="editor-type-title">Тест с одним ответом</h2></div><div class="mode-switch" role="tablist" aria-label="Режим"><button class="mode-button is-active" type="button" data-mode="edit" role="tab" aria-selected="true">Редактор</button><button class="mode-button" type="button" data-mode="preview" role="tab" aria-selected="false">Предпросмотр</button></div></div>
+        <form id="task-form"><div class="base-fields"><label class="field-label">Название задания<input id="task-title" maxlength="80" placeholder="Например, Основы JavaScript" required></label><label class="field-label">Сложность<select id="task-difficulty"><option>Легко</option><option selected>Средне</option><option>Сложно</option></select></label><label class="field-label field-wide">Инструкция<textarea id="task-instruction" rows="2" maxlength="180" placeholder="Коротко объясните, что нужно сделать" required></textarea></label></div><div id="type-fields"></div><div class="editor-actions"><button class="button button-outline" id="add-item" type="button">+ Добавить элемент</button><span class="autosave-note" id="editor-note">Предпросмотр обновляется при изменениях</span></div></form>
+        <div class="preview-panel" id="preview-panel" hidden><div id="preview-content"></div></div><div class="save-row"><span class="save-status" id="save-status" aria-live="polite"></span><button class="button button-dark" id="save-task" type="button">Сохранить задание <span aria-hidden="true">↗</span></button></div>
+      </section></div>
+  </main><footer class="site-footer"><a class="brand" href="index.html"><span class="brand-mark">it<span>.</span></span><span class="brand-name">Interactive<br>Task Builder</span></a><span>Думай. Пробуй. Понимай.</span><span>© 2026</span></footer>
+</body>
+</html>

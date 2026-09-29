@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#f4f2e9">
+  <title>Interactive Task Builder</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/animations.css">
+  <script src="js/tasks.js" defer></script><script src="js/checker.js" defer></script><script src="js/app.js" defer></script>
+</head>
+<body class="catalog-page">
+  <header class="topbar"><a class="brand" href="index.html"><span class="brand-mark">it<span>.</span></span><span class="brand-name">Interactive<br>Task Builder</span></a>
+    <nav class="main-nav" aria-label="Основная навигация"><a class="nav-link is-active" href="index.html">Главная</a><a class="nav-link" href="#catalog">Все задания</a><a class="nav-link" href="builder.html">Создать</a><a class="nav-link" href="#catalog">Мои задания</a></nav>
+    <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Открыть меню" aria-expanded="false">☰</button><a class="button button-dark top-create" href="builder.html"><span>+</span> Создать задание</a>
+  </header>
+  <main>
+    <section class="hero"><div class="hero-copy"><p class="eyebrow"><span class="eyebrow-dot"></span> Учиться — значит пробовать</p><h1>Знания,<br><em>которые</em> работают.</h1><p class="hero-text">Собирайте интерактивные задания, делитесь ими и сразу видьте, что уже получилось.</p><a class="button button-lime" href="builder.html">Собрать задание <span aria-hidden="true">↗</span></a></div>
+      <div class="hero-art" aria-label="Пример интерактивного задания"><div class="art-note note-one"><span class="note-label">01 / ВЫБЕРИ</span><strong>push()</strong><span class="note-check">✓</span></div><div class="art-note note-two"><span class="note-label">02 / СОЕДИНИ</span><span class="mini-pair"><b>HTML</b><i></i><b>Структура</b></span><span class="mini-pair"><b>CSS</b><i></i><b>Оформление</b></span></div><div class="art-stamp">PLAY<br>TO<br>LEARN</div><div class="art-scribble">✳</div></div>
+      <div class="hero-foot"><span>01 — 08</span><span>ФОРМАТОВ УПРАЖНЕНИЙ</span><span class="hero-foot-line"></span><span>СДЕЛАНО ДЛЯ ЛЮБОПЫТНЫХ</span></div>
+    </section>
+    <section class="catalog-section" id="catalog"><div class="section-heading"><div><p class="eyebrow">Библиотека заданий</p><h2>Выбирай и <em>практикуйся.</em></h2></div><button class="button button-outline" id="mix-button" type="button"><span aria-hidden="true">⤨</span> Случайный микс</button></div>
+      <div class="catalog-tools"><label class="search-box"><span aria-hidden="true">⌕</span><input id="search-input" type="search" placeholder="Найти задание..." aria-label="Поиск заданий"></label><label class="select-wrap"><span class="sr-only">Тип задания</span><select id="type-filter"><option value="all">Все форматы</option></select></label><label class="select-wrap"><span class="sr-only">Сложность</span><select id="difficulty-filter"><option value="all">Любая сложность</option><option>Легко</option><option>Средне</option><option>Сложно</option></select></label><span class="catalog-count" id="catalog-count"></span></div>
+      <div class="task-grid" id="task-grid" aria-live="polite"></div><div class="empty-state" id="empty-state" hidden><span class="empty-mark">?</span><h3>Пока ничего не найдено</h3><p>Попробуйте изменить запрос или создать новое задание.</p><a class="text-link" href="builder.html">Создать задание ↗</a></div>
+    </section>
+    <section class="play-section" id="play-section" hidden><div class="play-topline"><button class="text-link" id="back-to-catalog" type="button">← В каталог</button><span id="play-counter"></span></div><div id="play-content"></div></section>
+  </main>
+  <footer class="site-footer"><a class="brand" href="index.html"><span class="brand-mark">it<span>.</span></span><span class="brand-name">Interactive<br>Task Builder</span></a><span>Думай. Пробуй. Понимай.</span><span>© 2026</span></footer>
+</body>
+</html>
